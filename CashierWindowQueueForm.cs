@@ -35,8 +35,29 @@ namespace QueuingForm
 
                 listCashierQueue.Items.Add(obj.ToString());
             }
-         }
-       }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (CashierClass.CashierQueue.Count > 0)
+            {
+                CashierClass.CashierQueue.Dequeue();
+                DisplayCashierQueue(CashierClass.CashierQueue);
+            }
+            else
+            {
+                MessageBox.Show("No more customers in the queue.");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (CashierClass.CashierQueue != null)
+            {
+                DisplayCashierQueue(CashierClass.CashierQueue);
+            }
+        }
     }
+}
 
 

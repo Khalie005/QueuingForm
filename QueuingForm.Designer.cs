@@ -39,9 +39,10 @@
             btnCashier.BackColor = Color.White;
             btnCashier.Font = new Font("Rockwell", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCashier.ForeColor = SystemColors.ActiveCaptionText;
-            btnCashier.Location = new Point(46, 38);
+            btnCashier.Location = new Point(53, 51);
+            btnCashier.Margin = new Padding(3, 4, 3, 4);
             btnCashier.Name = "btnCashier";
-            btnCashier.Size = new Size(162, 133);
+            btnCashier.Size = new Size(185, 177);
             btnCashier.TabIndex = 0;
             btnCashier.Text = "Cashier";
             btnCashier.UseVisualStyleBackColor = false;
@@ -51,9 +52,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(249, 48);
+            label1.Location = new Point(285, 64);
             label1.Name = "label1";
-            label1.Size = new Size(226, 37);
+            label1.Size = new Size(284, 46);
             label1.TabIndex = 1;
             label1.Text = "Position in Queue";
             // 
@@ -61,9 +62,9 @@
             // 
             lblQueue.AutoSize = true;
             lblQueue.Font = new Font("Nirmala UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQueue.Location = new Point(241, 94);
+            lblQueue.Location = new Point(275, 125);
             lblQueue.Name = "lblQueue";
-            lblQueue.Size = new Size(242, 65);
+            lblQueue.Size = new Size(305, 81);
             lblQueue.TabIndex = 2;
             lblQueue.Text = "P - 10000";
             // 
@@ -72,25 +73,26 @@
             label3.AutoSize = true;
             label3.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(255, 128, 0);
-            label3.Location = new Point(61, 174);
+            label3.Location = new Point(70, 232);
             label3.Name = "label3";
-            label3.Size = new Size(131, 15);
+            label3.Size = new Size(165, 20);
             label3.TabIndex = 3;
             label3.Text = "*Click to get a number";
             // 
             // QueuingForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 192);
-            ClientSize = new Size(530, 236);
+            ClientSize = new Size(606, 315);
             Controls.Add(label3);
             Controls.Add(lblQueue);
             Controls.Add(label1);
             Controls.Add(btnCashier);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "QueuingForm";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "QueuingForm";
+            Load += QueuingForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
